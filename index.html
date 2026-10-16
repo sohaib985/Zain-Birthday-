@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Zain 🎂</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #07111f;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 20%, #163453 0, transparent 40%),
+      radial-gradient(circle at 80% 80%, #473116 0, transparent 35%);
+    z-index: -1;
+}
+
+header {
+    padding: 25px;
+    color: #f6c96b;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.eyebrow {
+    color: #f6c96b;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(48px, 10vw, 95px);
+    line-height: 1.1;
+    font-weight: 800;
+    background: linear-gradient(120deg, #fff, #f6c96b, #fff0bd);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { filter: drop-shadow(0 0 3px #f6c96b); }
+    to { filter: drop-shadow(0 0 20px #c38c32); }
+}
+
+.name {
+    font-size: clamp(35px, 7vw, 60px);
+    color: #f6c96b;
+    margin: 15px 0;
+    letter-spacing: 8px;
+}
+
+.cake {
+    font-size: 100px;
+    margin: 15px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.subtitle {
+    max-width: 550px;
+    color: #c4cfdd;
+    line-height: 1.9;
+    font-size: 16px;
+    margin: 15px 0 30px;
+}
+
+button {
+    background: linear-gradient(120deg, #f6c96b, #ffe6a6);
+    color: #101827;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 25px #f6c96b30;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 0 30px #f6c96b70;
+}
+
+.card {
+    max-width: 650px;
+    width: calc(100% - 40px);
+    margin: 0 auto 80px;
+    padding: 40px 25px;
+    background: #ffffff08;
+    border: 1px solid #f6c96b40;
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    display: none;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card h2 {
+    color: #f6c96b;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #d7dfeb;
+    line-height: 2;
+}
+
+.wish {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #f6c96b;
+}
+
+footer {
+    padding: 25px;
+    color: #8795a8;
+    font-size: 12px;
+}
+
+.balloon {
+    position: fixed;
+    bottom: -100px;
+    font-size: 35px;
+    animation: floatUp 9s linear infinite;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-120vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+#surprise {
+    margin-bottom: 50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>✦ A SPECIAL DAY ✦</header>
+
+<section class="hero">
+    <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+
+    <h1>HAPPY<br>BIRTHDAY</h1>
+
+    <div class="name">ZAIN</div>
+
+    <div class="cake">🎂</div>
+
+    <p class="subtitle">
+        One more year of memories, dreams and amazing moments.
+        Today the world celebrates someone truly special.
+        May your next chapter be your best one yet.
+    </p>
+
+    <button onclick="openSurprise()">
+        ✨ Open Your Surprise
+    </button>
+</section>
+
+<section class="card" id="surprise">
+    <h2>🥂 A Little Wish For You</h2>
+
+    <p>
+        Happy Birthday, Zain! 🎉<br><br>
+        May your life be filled with happiness,
+        success, unforgettable memories and people
+        who genuinely care about you.<br><br>
+        Keep dreaming big, keep smiling,
+        and never stop being yourself.
+        You deserve all the beautiful things
+        life has to offer.
+    </p>
+
+    <div class="wish">
+        Stay blessed. Stay legendary. ⭐
+    </div>
+
+    <div style="font-size:45px; margin-top:25px;">
+        🎁 🎈 🎂
+    </div>
+
+    <button onclick="celebrate()" style="margin-top:25px">
+        🎊 One More Surprise!
+    </button>
+</section>
+
+<footer>
+    MADE WITH ❤️ JUST FOR ZAIN
+</footer>
+
+<script>
+function openSurprise() {
+    const card = document.getElementById("surprise");
+    card.style.display = "block";
+    card.scrollIntoView({ behavior: "smooth" });
+    celebrate();
+}
+
+function celebrate() {
+    const emojis = ["🎈", "✨", "🎉", "⭐", "🎊"];
+
+    for (let i = 0; i < 35; i++) {
+        const balloon = document.createElement("div");
+
+        balloon.className = "balloon";
+        balloon.textContent =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+        balloon.style.left = Math.random() * 100 + "vw";
+        balloon.style.animationDuration =
+            (4 + Math.random() * 5) + "s";
+        balloon.style.fontSize =
+            (20 + Math.random() * 25) + "px";
+
+        document.body.appendChild(balloon);
+
+        setTimeout(() => balloon.remove(), 9500);
+    }
+}
+</script>
+
+</body>
+</html>
